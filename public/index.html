@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Bank Management</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('foto.png');
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            color: #2f00ff;
+            position: relative; /* Added position relative for the pseudo-element */
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to change the opacity */
+        }
+        h1 {
+            color: red;
+            font-size: 2.5em;
+            margin-top: 0;
+            position: relative; /* Added position relative to stack above the pseudo-element */
+            z-index: 1; /* Added z-index to be above the pseudo-element */
+        }
+        #content {
+            text-align: center;
+            width: 50%;
+            font-size: 1.5em;
+            margin-top: 0;
+            position: relative; /* Added position relative to stack above the pseudo-element */
+            z-index: 1; /* Added z-index to be above the pseudo-element */
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blood Bank Management</h1>
+    <div id="content">
+        <p id="temperature">Temperature: 0</p>
+        <p id="humidity">Humidity: 0</p>
+        <p id="coLevel">CO Level: 0</p>
+        <p id="acStatus">AC Status: Off</p>
+        <table id="bloodInventory">
+            <tr>
+                <th>Blood Type</th>
+                <th>Quantity</th>
+            </tr>
+            <!-- Rows will be added here by the JavaScript code -->
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
